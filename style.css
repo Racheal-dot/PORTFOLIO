@@ -1,0 +1,161 @@
+/* Generate reset and font */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+   font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: #f5f2f2;
+}
+
+/* header */
+nav {
+    background-color: #f5f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    box-shadow: 5px 5px 5px#dddbdb;
+    padding: 20px;
+    z-index: 999;
+}
+
+.logo h2 {
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    list-style-type: none;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link a::after {
+    content: "";
+    position: absolute;
+    background-color: #21c3b3;
+    width: 0%;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    border-radius: 2px;
+    transition: width 0.35s ease-in-out;
+}
+.nav-link a:hover::after{
+    width: 20px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #1a1919;
+    font-size: 12px;
+}
+
+.nav-link a:hover {
+    color: #21c3b3;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+
+.icons li:hover {
+    color: #21c3b3;
+}
+
+i {
+    color: #000000;
+}
+
+/* Hero */
+.hero {
+    padding: 60px 0 0;
+    background-image: url(./Asset/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .hero::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+} */
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-weight: 600;
+    
+}
+
+.hero-content p {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.hero-content button {
+    color: #fff;
+    background-color: #21c3b3;
+    ;
+    padding: 5px 40px 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.hero-content button:hover {
+    background-color: #2deedb;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 0;
+    /* opacity: 0.5; */
+}
+
+footer button:hover {
+    border: 1px solid #21c3b3;
+    cursor: pointer;
+}
+
+footer i:hover {
+    color: #21c3b3;
+}
+
+footer p{
+    font-size: small;
+    margin: 20px 0;
+}
+footer button {
+    border: 1px inset rgb(197, 194, 194);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+}
