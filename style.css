@@ -139,23 +139,22 @@ footer {
     /* opacity: 0.5; */
 }
 
-footer button:hover {
-    border: 1px solid #21c3b3;
-    cursor: pointer;
-}
-
-footer i:hover {
-    color: #21c3b3;
-}
 
 footer p{
     font-size: small;
     margin: 20px 0;
 }
-footer button {
-    border: 1px inset rgb(197, 194, 194);
+footer a i{
+    padding: 10px;
+    background-color: #ece1e1;
+    margin: 0 10px 0 0 ;
     border-radius: 50%;
-    padding: 5px;
-    cursor: pointer;
-    margin: 0 10px 0 0;
+}
+
+footer a i:hover {
+    color: #21c3b3;
+    border: 1px inset #21c3b3;
+}
+footer p i{
+    color: #ff0000;
 }

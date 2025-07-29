@@ -21,6 +21,7 @@ nav {
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    z-index: 99;
 }
 
 .logo h2 {
@@ -117,7 +118,6 @@ i {
 .hero-content {
     display: flex;
     justify-content: center;
-    width: 50%;
     margin: 30px 25%;
     font-size: 14px;
 }
@@ -159,7 +159,6 @@ i {
 /* Skill section */
 .skill {
     margin: 100px 25% 70px 25%;
-    width: 50%;
     font-size: 14px;
 }
 
@@ -199,7 +198,7 @@ i {
 .skill-fill {
     height: 100%;
     width: 0;
-    animation: fillBar 1.2s ease forwards;
+    animation: zoomIn 1.2s ease forwards;
 }
 
 /* individual select */
@@ -218,7 +217,7 @@ i {
     width: 0%;
 }
 
-@keyframes fillBar {
+@keyframes zoomIn {
     from {
         width: 0%;
     }
@@ -237,14 +236,44 @@ footer p {
     margin: 20px 0;
 }
 
-footer button {
-    border: 1px inset rgb(197, 194, 194);
-    border-radius: 50%;
-    padding: 5px;
-    cursor: pointer;
+
+footer a i {
+    padding: 10px;
+    background-color: #ece1e1;
     margin: 0 10px 0 0;
+    border-radius: 50%;
 }
 
-footer button:hover {
-    border: 1px solid #21c3b3;
+footer a i:hover {
+    color: #21c3b3;
+    border: 1px inset #21c3b3;
+}
+
+footer p i {
+    color: #ff0000;
+}
+
+/* Responsiveness */
+@media (max-width:768px) {
+    .nav-link {
+        display: none;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+    .all{
+        margin-top: 50px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .hero-content img{
+        margin: 0 10px;
+    }
 }

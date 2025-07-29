@@ -21,6 +21,7 @@ nav {
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    z-index: 99;
 }
 
 .logo h2 {
@@ -144,14 +145,28 @@ footer p {
     margin: 20px 0;
 }
 
-footer button {
-    border: 1px inset rgb(197, 194, 194);
+footer a i{
+    padding: 10px;
+    background-color: #ece1e1;
+    margin: 0 10px 0 0 ;
     border-radius: 50%;
-    padding: 5px;
-    cursor: pointer;
-    margin: 0 10px 0 0;
 }
 
-footer button:hover {
-    border: 1px solid #21c3b3;
+footer a i:hover {
+    color: #21c3b3;
+    border: 1px inset #21c3b3;
+}
+footer p i{
+    color: #ff0000;
+}
+
+/* Responsiveness */
+@media (max-width:768px) {
+    .nav-link{
+        display: none;
+    }
+    .hero-content{
+        flex-direction: column;
+    }
+
 }
