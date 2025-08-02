@@ -117,19 +117,22 @@ i {
 .hero-info {
     display: flex;
     justify-content: center;
-    padding: 40px;
-    margin: 60px;
+    align-items: center;
+    margin: 60px auto 30px;
+    min-width: 300px;
+    max-width: 1120px;
+    width: 100%;
 }
 
 .info {
-    width: 20%;
-    border-right: 3px solid rgb(144, 140, 140);
     text-align: center;
+    border-right: 3px solid #a39e9e;
+    padding: 0 20px;
 }
 
 .email {
-    width: 20%;
     text-align: center;
+    padding: 0 20px;
 }
 
 .hero-info i {
@@ -140,37 +143,82 @@ i {
     font-size: 16px;
 }
 
-.hero-info i:hover{
+.hero-info i:hover {
     background-color: #21c3b3;
     color: #fff;
 }
-.info h3 {
-    margin: 0 0 10px;
+
+.hero-content {
+    padding: 0 20px;
 }
 
-.email h3{
-    margin: 0 0 10px;
+.hero-form {
+    min-width: 300px;
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto 60px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-.hero-data{
+.input {
+    display: flex;
+    gap: 10px;
+}
+
+input:focus{
+    outline: none;
+    border:1px solid #21c3b3;
+}
+
+ textarea:focus{
+    outline: none;
+     border:1px solid #21c3b3;
+}
+
+.hero-form form {
+    width: 100%;
+}
+
+.input input{
+    margin: 0 0 20px 0;
+    padding: 10px ;
+    width: 50%;
+}
+
+.subject input {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+
+.btn {
     text-align: center;
 }
-.hero-form{
-    box-sizing: border-box;
-    width: 50%;
-    margin: 50px 25%;
-    box-shadow: 5px 15px 15px#dddbdb;
-    background-color: #f5f2f2;
-    height: 500px;
+
+.btn input {
+    color: #fff;
+    background-color: #21c3b3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 1.2s ease;
 }
 
-textarea{
-    width: 100%;
-    height: 50px;
-    /* border-top: none;
-    border-left: none;
-    border-right: none; */
+.btn input:hover {
+    background-color: #53b3a9;
 }
+
 /* Footer */
 footer {
     text-align: center;
@@ -184,10 +232,10 @@ footer p {
     margin: 20px 0;
 }
 
-footer a i{
+footer a i {
     padding: 10px;
     background-color: #ece1e1;
-    margin: 0 10px 0 0 ;
+    margin: 0 10px 0 0;
     border-radius: 50%;
 }
 
@@ -196,8 +244,25 @@ footer a i:hover {
     border: 1px inset #21c3b3;
 }
 
-footer p i{
+footer p i {
     color: #ff0000;
 }
 
-/*  */
+/* Responsiveness */
+@media (max-width:768px) {
+
+    .nav-link {
+        display: none;
+    }
+
+    .hero-info {
+        flex-direction: column;
+        border: none;
+        justify-content: center;
+    }
+
+    .info {
+        border: none;
+        margin: 0 0 30px 0;
+    }
+}

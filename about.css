@@ -17,7 +17,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0%;
+    top: 0;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -117,8 +117,9 @@ i {
 
 .hero-content {
     display: flex;
-    justify-content: center;
-    margin: 30px 25%;
+    margin: 30px auto;
+    max-width: 1120px;
+    min-width: 300px;
     font-size: 14px;
 }
 
@@ -126,7 +127,8 @@ i {
     font-size: 14px;
 }
 
-.hero-content img {
+
+.hero-img img {
     width: 400px;
 }
 
@@ -135,7 +137,8 @@ i {
 }
 
 .all h2 {
-    margin: 0 0 20px 0;
+    margin: 0 auto 20px;
+    padding: 0 5px 0 0;
 }
 
 .about {
@@ -143,23 +146,30 @@ i {
     gap: 50px;
 }
 
-.info {
-    margin: 20px 0 20px 0;
+.info1 {
+    margin: 20px 0;
 }
 
-.info p {
+.info2 {
+    margin: 20px 0;
+}
+
+.about p {
     padding: 0 0 20px 0;
 }
 
-.info i {
+.about i {
     color: rgb(89, 247, 89);
     margin: 0 10px 0 0;
 }
 
 /* Skill section */
 .skill {
-    margin: 100px 25% 70px 25%;
+    margin: 100px auto 70px;
     font-size: 14px;
+    max-width: 1120px;
+    min-width: 320px;
+    width: 100%;
 }
 
 .skill-heading {
@@ -264,16 +274,41 @@ footer p i {
         align-items: center;
     }
 
+    .hero-content img {
+        margin: 0 10px;
+    }
+
     body {
         overflow-x: hidden;
     }
-    .all{
+
+    .all {
         margin-top: 50px;
     }
-    .about{
+
+    .about {
         flex-direction: column;
+        gap: 0;
     }
-    .hero-content img{
+
+    .hero-content img {
         margin: 0 10px;
+    }
+
+
+    .info1 {
+        margin: 20px 0 0;
+    }
+
+    .info2 {
+        margin: 0 0 20px;
+    }
+
+    .skill {
+        padding: 0 10px;
+    }
+
+    .hero-img img {
+        width: 310px;
     }
 }

@@ -119,8 +119,12 @@ i {
 
 .hero-content{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
 }
 .hero-links{
     display: flex;
@@ -128,9 +132,16 @@ i {
 }
 
 .hero-links a img{
-    width: 400px;
-    margin: 0 10px 10px 0;
+    transform: scale(1.2s);
+    min-width: 300px;
+    max-width: 400px;
+    margin: 0 10px 10px;
 }
+
+.hero-links a img:hover{
+    transform: scale(1.5);
+}
+
 
 /* Footer */
 footer {
@@ -168,5 +179,7 @@ footer p i{
     .hero-content{
         flex-direction: column;
     }
-
+    .hero-links a img{
+        margin: 0 0 10px;
+    }
 }
